@@ -8,4 +8,11 @@ class User < ActiveRecord::Base
   validates_presence_of     :password, :on => :create
   validates_confirmation_of :password, :on => :create
   validates_length_of       :password, :within => Devise.password_length, :allow_blank => true
+
+  has_many :resolution
+
+  def to_s
+    username
+  end
+
 end

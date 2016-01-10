@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @resolution.body %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @resolution.user %>
+</p>
+
+<%= link_to 'Edit', edit_resolution_path(@resolution) %> |
+<%= link_to 'Back', resolutions_path %>
