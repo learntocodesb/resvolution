@@ -4,7 +4,7 @@ class ResolutionsController < ApplicationController
   # GET /resolutions
   # GET /resolutions.json
   def index
-    @resolutions = Resolution.all
+    @resolutions = Resolution.order('created_at DESC').all
   end
 
   # GET /resolutions/1
@@ -24,8 +24,6 @@ class ResolutionsController < ApplicationController
   # POST /resolutions
   # POST /resolutions.json
   def create
-    # require 'pry'
-    # binding.pry
     @resolution = Resolution.new(resolution_params.merge('user' => current_user))
 
     respond_to do |format|
