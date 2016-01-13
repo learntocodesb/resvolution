@@ -69,6 +69,6 @@ class ResolutionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resolution_params
-      params.require(:resolution).permit(:body, :user_id)
+      params.require(:resolution).permit(:body, :user_id, :completed)
     end
 end
