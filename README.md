@@ -4,11 +4,10 @@ The app we worked on for our [Agile Hackathon event at Learn to Code SB](http://
 
 # Final code from the hackathon teams
 Check out these branches for the code the teams ended up with at the hackathon:
-* [Red Team](#) (Will post when available)
-* [Green Team](#) (Will post when available)
+* [Red Team](https://github.com/learntocodesb/resvolution/tree/yellow-team) (Not yet available)
+* [Green Team](https://github.com/learntocodesb/resvolution/tree/green-team)
 * [Blue Team](https://github.com/learntocodesb/resvolution/blob/blue-team)
-* [Yellow Team](#) (Will post when available)
-
+* [Yellow Team](https://github.com/learntocodesb/resvolution/tree/yellow-team) (Not yet available)
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
