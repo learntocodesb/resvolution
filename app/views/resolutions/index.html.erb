@@ -7,14 +7,34 @@
                     <hr class="small">
                     <span class="subheading">Change your life, change the world.</span>
                 </div>
+
             </div>
         </div>
     </div>
 </header>
 
+
 <!-- Main Content -->
 <div class="container">
     <div class="row">
+      <% completed = @resolutions.where(user: current_user, completed: true).count %>
+      <% total = @resolutions.where(user: current_user).count %>
+      <% percent_complete = completed/total.to_f*100 %>
+      <h2>
+        <% unless total.zero? %>
+          <%= "You have completed #{completed/total.to_f*100} % of your resolutions"%>
+        <% else %>
+          <%= "You ain't done nothin" %>
+        <% end %>
+      </h2>
+
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+             aria-valuemin="0" aria-valuemax="100" style="width:<%= percent_complete %>%">
+          <span class="sr-only">70% Complete</span>
+        </div>
+      </div>
+
 
         <ul class="pager">
             <li class="next">
@@ -23,7 +43,6 @@
         </ul>
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <% @resolutions.each do |resolution| %>
-
                 <%= link_to resolution do %>
                     <div class="post-preview">
 
@@ -34,10 +53,16 @@
 
                         </h3>
                 <% end %>
+                <% if resolution.completed %>
+                  <span class="label-warning"> Completed </span>
+                <% end %>
                 <p class="post-meta">Posted by <a href="#">@<%= resolution.user.username %></a> on <%= resolution.created_at %>hi</p>
                     </div>
 
       </tr>
+
+
+
             <% end %>
 
             <hr>
