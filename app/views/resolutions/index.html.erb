@@ -30,11 +30,14 @@
                         <h2 class="post-title">
                             <%= resolution.body %>
                         </h2>
+                        <form action="demo_form.asp">
+                          <input type="checkbox" name="vehicle" value="Bike"> Completed<br>
+                        </form>
                         <h3 class="post-subtitle">
 
                         </h3>
                 <% end %>
-                <p class="post-meta">Posted by <a href="#">@<%= resolution.user.username %></a> on <%= resolution.created_at %>hi</p>
+                <p class="post-meta">Posted by <a href="#">@<%= resolution.user.username if resolution.user %></a> on <%= resolution.created_at %>hi</p>
                     </div>
 
       </tr>
