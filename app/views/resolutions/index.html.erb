@@ -30,9 +30,15 @@
                         <h2 class="post-title">
                             <%= resolution.body %>
                         </h2>
-                        <form action="demo_form.asp">
-                          <input type="checkbox" name="vehicle" value="Bike"> Completed<br>
-                        </form>
+                        <%# form_for resolution, url: url_for(action: :update_completed) %>
+                        <%= simple_form_for(resolution) do |f| %>
+                          <%= f.input :completed %>
+                          <% if resolution.id == 2 %>
+                            <img src="http://cdn.meme.am/instances/61625433.jpg">
+                          <% end %>
+                          <%= link_to "Upload Photo", url_for("http://cdn.meme.am/instances/61625433.jpg")%>
+                          <%= f.button :submit %>
+                        <% end%>
                         <h3 class="post-subtitle">
 
                         </h3>
