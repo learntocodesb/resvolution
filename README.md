@@ -4,7 +4,7 @@ The app we worked on for our [Agile Hackathon event at Learn to Code SB](http://
 
 # Final code from the hackathon teams
 Check out these branches for the code the teams ended up with at the hackathon:
-* [Red Team](https://github.com/learntocodesb/resvolution/tree/yellow-team)
+* [Red Team](https://github.com/learntocodesb/resvolution/tree/red-team)
 * [Green Team](https://github.com/learntocodesb/resvolution/tree/green-team)
 * [Blue Team](https://github.com/learntocodesb/resvolution/blob/blue-team)
 * [Yellow Team](https://github.com/learntocodesb/resvolution/tree/yellow-team) (Not yet available)
