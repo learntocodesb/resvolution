@@ -36,9 +36,15 @@
                 <% end %>
                 <p class="post-meta">Posted by <a href="#">@<%= resolution.user.username %></a> on <%= resolution.created_at %>hi</p>
                     </div>
+                    <% resolution.comments.each do |comment| %>
+                        <p>$<%= comment.fee%>
+                        <%= comment.foa ? "For" : "Against"%>
+                        <label>Comment:</label>
+                        <%= comment.content%></p>
 
-      </tr>
+                    <% end %>
             <% end %>
+
 
             <hr>
 
