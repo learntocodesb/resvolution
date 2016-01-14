@@ -10,5 +10,19 @@
   <%= @resolution.user %>
 </p>
 
+<p>
+    <label>Comment</label>
+    <%= form_for Comment.new do |f| %>
+    <label>Fee</label>
+    <%= f.number_field :fee%>
+    <label>FOA</label>
+    <%= f.check_box :foa%>
+    <label>Content</label>
+    <%= f.text_field :content%>
+    <%= f.hidden_field :resolution_id,value: @resolution.id%>
+    <%= f.submit%>
+    <%end%>
+</p>
+
 <%= link_to 'Edit', edit_resolution_path(@resolution) %> |
 <%= link_to 'Back', resolutions_path %>
