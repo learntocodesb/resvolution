@@ -30,11 +30,22 @@
                         <h2 class="post-title">
                             <%= resolution.body %>
                         </h2>
+                        <div>
+                          likes:<%= resolution.like%>
+                        </div>
+                        <div>
+                          dislikes:<%= resolution.dislike%>
+                        </div>
                         <h3 class="post-subtitle">
-
+                        <div>
+                          <%= link_to "Like   ", likes_resolution_path(resolution),class: "btn btn-success" %>
+                        </div>
+                        <div>
+                          <%= link_to "Dislike", dislikes_resolution_path(resolution),class: "btn btn-danger" %>
+                        </div>
                         </h3>
                 <% end %>
-                <p class="post-meta">Posted by <a href="#">@<%= resolution.user.username %></a> on <%= resolution.created_at %>hi</p>
+                <p class="post-meta">Posted by <a href="#">@<%= resolution.user.username unless resolution.user.nil? %></a> on <%= resolution.created_at %>hi</p>
                     </div>
 
       </tr>

@@ -12,6 +12,26 @@ class ResolutionsController < ApplicationController
   def show
   end
 
+  def likes
+    @resolution = Resolution.find(params[:id])
+    @resolution.like += 1
+    @resolution.save
+    flash["notice"] = "You liked this resolution"
+    # reload
+    redirect_to :back
+    #redirect_to 'root_path'
+  end
+
+  def dislikes
+    @resolution = Resolution.find(params[:id])
+    @resolution.dislike += 1
+    @resolution.save
+    flash[:warning] = "You disliked this resolution"
+    # reload
+    redirect_to :back
+    #redirect_to 'root_path'
+  end
+
   # GET /resolutions/new
   def new
     @resolution = Resolution.new
